@@ -10,17 +10,17 @@
 let button = document.querySelector("a.btn");
 button.addEventListener("click", function (){
     let userPickedNumber = Math.floor(Math.random() * 6 + 1);
-    document.querySelector("pre.user-number").innerHTML += userPickedNumber;
+    document.querySelector("pre.user-number").innerHTML = `Il tuo numero: ${userPickedNumber}`;
 
     let pcPickedNumber = Math.floor(Math.random() * 6 + 1);
-    document.querySelector("pre.pc-number").innerHTML += pcPickedNumber;
+    document.querySelector("pre.pc-number").innerHTML = `Il tuo numero: ${userPickedNumber}`;
 
     if (userPickedNumber > pcPickedNumber){
-        document.getElementById("output").innerHTML = "Hai vinto";
+        document.getElementById("output").innerHTML = "Risultato: hai vinto!";
     }       else if (userPickedNumber == pcPickedNumber){
-        document.getElementById("output").innerHTML = "Pareggio";
+        document.getElementById("output").innerHTML = "Risultato: pareggio!";
     }       else {
-        document.getElementById("output").innerHTML = "Hai perso";
+        document.getElementById("output").innerHTML = "Risultato: hai perso!";
     }
 });
 
